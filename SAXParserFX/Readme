@@ -1,0 +1,5 @@
+README:
+
+Este programa es un SAXParser del periodico el Pais con javaFX. 
+Tan solo se debe compilar y ejecutar normalmente.
+Una vez ejecutado puedes ver y buscar noticias mediante la interfaz.
