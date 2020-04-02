@@ -1,5 +1,7 @@
 package com.RomeParser.xml.Parser;
 
+import java.util.stream.Stream;
+
 import java.net.URL;
 import java.io.InputStreamReader;
 import com.rometools.rome.feed.synd.SyndFeed;
@@ -36,12 +38,10 @@ public class RomeParser {
 		    List<SyndEntry> syndE = new ArrayList<SyndEntry>();
 			Set<String> title = hash2.keySet();
  			Set<String> url = hash1.keySet();
-
- 			
-
   			Stream<String> stream = title.stream();
   			stream
-  			.forEach(s -> System.out.println(hash2.get(s)))
+  			.forEach(s -> System.out.println(hash2.get(s)));
+			/*
   			Stream<String> stream1 = url.stream();
   			stream1
   			.forEach(t -> feedUrl = new URL(hash1.get(t)))
@@ -50,10 +50,8 @@ public class RomeParser {
   			.forEach(i -> System.out.println(feed.getTitle(i)))
   			.forEach(u -> syndE= feed.getEntries())
   			.limit(5)
-  			.forEach(a -> System.out.println("\nTítulo: \n" + a.getTitle() + "\n Link: \n" + a.getLink() + "\n Descripción: \n" + a.getDescription().getValue() + "\n"));
+  			.forEach(a -> System.out.println("\nTítulo: \n" + a.getTitle() + "\n Link: \n" + a.getLink() + "\n Descripción: \n" + a.getDescription().getValue() + "\n"));  */
   		}
-
-
   			catch (Exception ex) {
 			ex.printStackTrace();
 			System.out.println("ERROR: " + ex.getMessage());
